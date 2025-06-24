@@ -3,7 +3,7 @@ body {
     margin: 0;
     background-color: #1a1a1a;
     color: #FFF;
-    font-family: 'Bicubik', monospace;
+    font-family: 'Jet', monospace;
   }
   
   a {
@@ -99,6 +99,27 @@ body {
 
   h1, h2, .logo {
     font-family: 'Bicubik', sans-serif;
+  }
+  
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    line-height: 1.2;
+  }
+  
+  .title {
+    font-family: 'JetBrains Mono', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #ffffff;
+  }
+  
+  .subtitle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #bbbbbb;
+    margin-top: 2px;
   }
   
   
