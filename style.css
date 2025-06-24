@@ -19,6 +19,19 @@ body {
     padding: 20px 40px;
     border-bottom: 1px solid #b6ff00;
   }
+
+  .left-header {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* space between logo and text */
+  }  
+
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    padding-top: 2px; /* tweak as needed */
+  }  
   
   .logo {
     font-family: 'Orbitron', sans-serif;
