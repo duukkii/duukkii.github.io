@@ -69,7 +69,7 @@ header {
 /* === Navigation === */
 nav ul.nav-list {
   display: flex;
-  gap: 20px;
+  gap: 14px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -79,7 +79,7 @@ nav ul.nav-list {
 .nav-link {
   font-family: 'JetBrains Mono', monospace;
   text-transform: lowercase;
-  font-size: 12px;
+  font-size: 14px;
   padding: 8px 16px;
   border: 1px solid #b6ff00;
   border-radius: 20px;
