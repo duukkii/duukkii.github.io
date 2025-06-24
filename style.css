@@ -3,7 +3,7 @@ body {
     margin: 0;
     background-color: #1a1a1a;
     color: #FFF;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Bicubik', monospace;
   }
   
   a {
@@ -89,4 +89,17 @@ body {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(10px); }
   }
+
+  @font-face {
+    font-family: 'Bicubik';
+    src: url('./fonts/Bicubik-71qR.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  h1, h2, .logo {
+    font-family: 'Bicubik', sans-serif;
+  }
+  
+  
   
