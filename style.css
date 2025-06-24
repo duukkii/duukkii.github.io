@@ -1,139 +1,141 @@
-/* === Base === */
+/* === Import Google Font === */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+/* === Load Bicubik locally === */
+@font-face {
+  font-family: 'Bicubik';
+  src: url('./fonts/Bicubik-71qR.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* === Base Styles === */
 body {
-    margin: 0;
-    background-color: #1a1a1a;
-    color: #FFF;
-    font-family: 'Jet', monospace;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #FFF;
-  }
-  
-  /* === Header === */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    border-bottom: 1px solid #b6ff00;
-  }
+  margin: 0;
+  background-color: #1a1a1a;
+  color: #FFF;
+  font-family: 'Bicubik', sans-serif;
+}
 
-  .left-header {
-    display: flex;
-    align-items: center;
-    gap: 15px; /* space between logo and text */
-  }  
+a {
+  text-decoration: none;
+  color: #FFF;
+}
 
-  .brand-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-    padding-top: 2px; /* tweak as needed */
-  }  
-  
-  .logo {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 32px;
-    color: #b6ff00;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  nav a {
-    padding: 8px 16px;
-    border: 1px solid #b6ff00;
-    border-radius: 20px;
-    font-size: 14px;
-    transition: all 0.3s ease;
-  }
-  
-  nav a.active, nav a:hover {
-    background-color: #b6ff00;
-    color: #1a1a1a;
-  }
-  
-  /* === Hero === */
-  .hero {
-    text-align: center;
-    padding: 100px 40px;
-  }
-  
-  .hero .subtext {
-    font-size: 14px;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-  }
-  
-  .hero h1 {
-    font-size: 64px;
-    line-height: 1.2;
-    text-transform: uppercase;
-  }
-  
-  .hero .white {
-    color: white;
-  }
-  
-  .hero .green {
-    color: #b6ff00;
-  }
-  
-  .bottom-tag {
-    margin-top: 30px;
-    font-size: 14px;
-    letter-spacing: 1px;
-  }
-  
-  /* === Scroll Down Icon === */
-  .scroll-down {
-    font-size: 32px;
-    margin-top: 60px;
-    color: #b6ff00;
-    animation: bounce 2s infinite;
-  }
-  
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(10px); }
-  }
+/* === Header === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #b6ff00;
+  flex-wrap: wrap;
+}
 
-  @font-face {
-    font-family: 'Bicubik';
-    src: url('./fonts/Bicubik-71qR.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
+.left-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
-  h1, h2, .logo {
-    font-family: 'Bicubik', sans-serif;
-  }
-  
-  .brand-text {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    line-height: 1.2;
-  }
-  
-  .title {
-    font-family: 'JetBrains Mono', sans-serif;
-    font-size: 12px;
-    letter-spacing: 1px;
-    color: #ffffff;
-  }
-  
-  .subtitle {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: #bbbbbb;
-    margin-top: 2px;
-  }
-  
-  
-  
+.logo {
+  width: 48px;
+  height: auto;
+  display: block;
+}
+
+/* === Brand Text === */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.title {
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 0;
+}
+
+.subtitle {
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: lowercase;
+  font-size: 10px;
+  color: #bbbbbb;
+  margin: 0;
+}
+
+/* === Navigation === */
+nav ul.nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: nowrap;
+}
+
+.nav-link {
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: lowercase;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: 1px solid #b6ff00;
+  border-radius: 20px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background-color: #b6ff00;
+  color: #1a1a1a;
+}
+
+/* === Hero Section === */
+.hero {
+  text-align: center;
+  padding: 100px 40px;
+}
+
+.hero .subtext {
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-family: 'Bicubik', sans-serif;
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-family: 'Bicubik', sans-serif;
+}
+
+.hero .white {
+  color: white;
+}
+
+.hero .green {
+  color: #b6ff00;
+}
+
+.bottom-tag {
+  margin-top: 30px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-family: 'Bicubik', sans-serif;
+}
+
+/* === Scroll Down Icon === */
+.scroll-down {
+  font-size: 32px;
+  margin-top: 60px;
+  color: #b6ff00;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
