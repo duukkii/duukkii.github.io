@@ -1,39 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Duana Goh Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>duana goh — portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=IBM+Plex+Mono:wght@300;400;600&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta name="description" content="From concept to canvas — bold, fun, reliable design." />
 </head>
 <body>
 
-  <header>
-    <div class="left-header">
-      <img src="./assets/logo.svg" alt="dg" class="logo" />
-  
-      <div class="brand-text">
-        <p class="title">FROM CONCEPT TO CANVAS</p>
-        <p class="subtitle">a duana goh design</p>
+  <!-- Sticky header -->
+  <header class="hdr">
+    <a class="brand" href="#home">
+      <span class="mark">dg</span>
+      <div class="brand-lines">
+        <strong>FROM CONCEPT TO CANVAS</strong>
+        <small>a duana goh design</small>
       </div>
-    </div>
+    </a>
 
-    <nav>
-      <ul class="nav-list">
-        <li><a href="#" class="nav-link active">home</a></li>
-        <li><a href="#" class="nav-link">about me</a></li>
-        <li><a href="#" class="nav-link">projects</a></li>
-        <li><a href="#" class="nav-link">experience</a></li>
-      </ul>
+    <!-- mobile menu toggle -->
+    <input id="menu" type="checkbox" class="menu-toggle" aria-label="toggle navigation" />
+    <label for="menu" class="hamburger" aria-hidden="true"><span></span></label>
+
+    <nav class="nav">
+      <a href="#home" class="pill active">home</a>
+      <a href="#about" class="pill">about me</a>
+      <a href="#projects" class="pill">projects</a>
+      <a href="#experience" class="pill">experience</a>
     </nav>
   </header>
 
-  <main class="hero">
-    <p class="subtext">IF YOU'RE LOOKING FOR</p>
-    <h1><span class="white">BOLD,</span> <span class="green">FUN,</span> <span class="green">&</span> <span class="white">RELIABLE</span></h1>
-    <p class="bottom-tag">DESIGN, LOOK NO FURTHER!</p>
-    <div class="scroll-down">&#8595;</div>
-  </main>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <p class="eyebrow">if you’re looking for</p>
+    <h1 class="headline">
+      <span class="line">bold.</span>
+      <span class="line accent">fun, &</span>
+      <span class="line">reliable</span>
+    </h1>
+    <p class="micro">design, look no further!</p>
+    <a class="round-cta" href="#projects" aria-label="scroll to projects">↓</a>
+    <div class="big-dg" aria-hidden="true">dg</div>
+    <div class="big-dg big-dg--left" aria-hidden="true">dg</div>
+  </section>
 
+  <!-- ABOUT -->
+  <section id="about" class="about section">
+    <div class="about__grid">
+      <div class="about__text card">
+        <p class="mono">Hi, I’m Duana!</p>
+        <p>
+          Currently studying Design and Artificial Intelligence at SUTD, I love turning ideas into user-focused experiences and creative self-expression.
+        </p>
+        <p>
+          Toolkit: Adobe Creative Suite, 3D modelling, media production, and marketing. I thrive where big ideas and good vibes flow.
+        </p>
+        <p>
+          Outside the studio: dancing, singing, laughing with friends—because creativity doesn’t clock out.
+        </p>
+      </div>
+      <figure class="about__photo frame">
+        <img src="assets/about.jpg" alt="Duana at a staircase with bicycles" />
+      </figure>
+    </div>
+    <h2 class="section-title">ABOUT ME</h2>
+  </section>
+
+  <!-- PROJECTS (with CSS-only filters) -->
+  <section id="projects" class="projects section">
+    <h2 class="section-title">PROJECTS</h2>
+
+    <!-- FILTERS -->
+    <div class="filters">
+      <!-- radios control category via CSS -->
+      <input type="radio" name="cat" id="show-all" checked>
+      <label class="pill pill--big" for="show-all">all</label>
+
+      <input type="radio" name="cat" id="show-uiux">
+      <label class="pill pill--big" for="show-uiux">ui/ux</label>
+
+      <input type="radio" name="cat" id="show-graphic">
+      <label class="pill pill--big" for="show-graphic">graphic</label>
+
+      <input type="radio" name="cat" id="show-product">
+      <label class="pill pill--big" for="show-product">product</label>
+
+      <input type="radio" name="cat" id="show-illustration">
+      <label class="pill pill--big" for="show-illustration">illustration</label>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid">
+      <!-- item -->
+      <a class="tile cat-product" href="project-raia.html">
+        <img src="assets/raia-thumb.jpg" alt="Project RAIA black vehicle render" />
+        <div class="tile__label">
+          <h3>Project RAIA</h3><span class="chip">product</span>
+        </div>
+      </a>
+
+      <a class="tile cat-uiux" href="#">
+        <img src="assets/studywise-thumb.jpg" alt="StudyWise app preview" />
+        <div class="tile__label">
+          <h3>StudyWise</h3><span class="chip">ui/ux</span>
+        </div>
+      </a>
+
+      <a class="tile cat-graphic" href="#">
+        <img src="assets/poster-thumb.jpg" alt="Poster design preview" />
+        <div class="tile__label">
+          <h3>Golden Memories</h3><span class="chip">graphic</span>
+        </div>
+      </a>
+
+      <a class="tile cat-illustration" href="#">
+        <img src="assets/illustration-thumb.jpg" alt="Illustration preview" />
+        <div class="tile__label">
+          <h3>NeoKånken</h3><span class="chip">illustration</span>
+        </div>
+      </a>
+      <!-- add more tiles and category classes as needed -->
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="experience section">
+    <h2 class="section-title">EXPERIENCE</h2>
+
+    <article class="xp card card--row">
+      <div class="xp__text">
+        <h3 class="xp__role">STEAMUNITY MENTOR <span class="org">SUTD STEAMUNITY</span></h3>
+        <ul class="bullets">
+          <li>Mentored students to maximize storage utility for a mobility device (with NKF).</li>
+          <li>Taught design thinking skills for pre-university students (15–19).</li>
+        </ul>
+      </div>
+      <figure class="xp__photo frame"><img src="assets/xp-steam.jpg" alt="STEAMUNITY group photo"></figure>
+    </article>
+
+    <article class="xp card card--row">
+      <div class="xp__text">
+        <h3 class="xp__role">ESSAY MARKER <span class="org">WRITERS GUILD</span></h3>
+        <ul class="bullets">
+          <li>Graded essays and gave detailed feedback on content, structure, grammar.</li>
+          <li>Applied standardized criteria to ensure fairness and improvement.</li>
+        </ul>
+      </div>
+      <figure class="xp__photo frame"><img src="assets/xp-writers.jpg" alt="Writers Guild logo"></figure>
+    </article>
+
+    <!-- add more as needed -->
+  </section>
+
+  <footer class="ftr">
+    © <span id="y"></span> duana goh — from concept to canvas
+  </footer>
+
+  <script>
+    // current year only
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
