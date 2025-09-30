@@ -1,3 +1,24 @@
+/* ===== Local fonts (drop .woff2 files in /fonts) ===== */
+@font-face{
+  font-family:"Bicubik";
+  src:url("fonts/Bicubik-Regular.woff2") format("woff2");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Supertext 03";
+  src:url("fonts/ST01R.TTF") format("truetype");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"JetBrains Mono";
+  src:url("fonts/JetBrainsMono-Regular.ttf") format("truetype");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+
+/* Global fallbacks (keep Inter as body fallback) */
+body{ font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+
+
 /* =========================
    THEME
 ========================= */
@@ -82,9 +103,11 @@ img{max-width:100%; display:block}
 ========================= */
 .hero{position:relative; max-width:var(--max); margin:0 auto; padding:70px 18px 40px}
 .headline{
-  font-family: Orbitron, sans-serif;
-  text-transform:uppercase; margin:.2em 0;
-  font-size: clamp(42px, 7.5vw, 110px); line-height:.9;
+  font-family: "Bicubik", Orbitron, system-ui, sans-serif;
+  font-size: clamp(42px, 7.5vw, 128px);
+  line-height: 1.166;         /* 116.6% */
+  letter-spacing: 0;          /* Figma: 0% */
+  text-transform: uppercase;
 }
 .headline .line{display:block}
 .headline .accent{color:var(--lime)}
