@@ -134,7 +134,7 @@ img{max-width:100%; display:block}
   pointer-events:none; user-select:none;
 }
 .big-dg img{
-  width:100%; height:auto; opacity: 0.16; /* Apply opacity directly to the image */
+  width:100%; height:auto; opacity: 0.16; rotate: 16deg; /* Apply opacity directly to the image */
 }
 .big-dg--left{ left:-20vw; bottom:-12vw; right:auto; transform:rotate(16deg) }
 
@@ -149,7 +149,8 @@ img{max-width:100%; display:block}
   box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
 }
 .frame{border-radius:20px; overflow:hidden; border:1px solid #3a3d42; background:#222}
-.about__photo img{width:60%; height:60%; display:block}
+.about__photo.frame { aspect-ratio: 1 / 1; } /* Make container square */
+.about__photo img{width:100%; height:100%; display:block; object-fit:cover; /* Fill container, crop if needed */} 
 
 /* =========================
    PROJECTS + FILTERS
