@@ -41,6 +41,7 @@ body{
   margin:0; background:var(--bg); color:var(--ink);
   font-family: "Supertext 03", sans-serif;
   line-height:1.6;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 img{max-width:100%; display:block}
 
@@ -167,7 +168,7 @@ img{max-width:100%; display:block}
   width: var(--dg-right-size);
   right: -20vw;                 /* push slightly off canvas */
   bottom: -3vw;
-  rotate: 17deg;
+  transform: rotate(17deg);
 }
 .big-dg img{ display:block; width:100%; height:auto; opacity: 0.18; } /* Added opacity and missing brace */
 .big-dg--left{
@@ -175,7 +176,7 @@ img{max-width:100%; display:block}
   left: -25vw;                  /* more off canvas on the left */
   bottom: -35vw;
   right: auto;
-  rotate: -117deg;
+  transform: rotate(-117deg);
 }
 
 /* ---------- Responsive nudges ---------- */
@@ -199,7 +200,15 @@ img{max-width:100%; display:block}
 /* =========================
    ABOUT
 ========================= */
-.about{background:var(--panel-2); position:relative; z-index: 2; /* Ensure this section sits above the hero's background logos */}
+.about{
+  background:var(--panel-2);
+  position:relative; 
+  z-index: 2; 
+  min-height: 100vh; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
 .about__grid{display:grid; grid-template-columns:1.15fr .85fr; gap:22px; align-items:start}
 @media (max-width:900px){ .about__grid{grid-template-columns:1fr; } }
 .card{
@@ -208,7 +217,44 @@ img{max-width:100%; display:block}
 }
 .frame{border-radius:20px; overflow:hidden; border:0px solid #3a3d42; background:#222}
 .about__photo.frame { aspect-ratio: 1 / 1; } /* Make container square */
-.about__photo img{width:100%; height:100%; display:block; object-fit:cover; /* Fill container, crop if needed */} 
+.about__photo img{width:100%; height:100%; display:block; object-fit:cover; /* Fill container, crop if needed */}
+
+/* Toolkit Box Styles */
+.toolkit-box {
+  background: #D9D9D9; /* Light grey from mockup */
+  color: #181a19; /* Dark text */
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin: 24px 0;
+  text-align: center;
+}
+.toolkit-box h4 {
+  margin: 0 0 16px;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.toolkit-icons {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+.toolkit-icons figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.toolkit-icons img {
+  width: 52px;
+  height: 52px;
+}
+.toolkit-icons figcaption {
+  font-family: "SF Mono", monospace;
+  font-size: .75rem;
+  color: #333;
+}
 
 /* =========================
    PROJECTS + FILTERS
