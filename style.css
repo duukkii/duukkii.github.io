@@ -39,14 +39,15 @@ body{ font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, san
 html{scroll-behavior:smooth}
 body{
   margin:0; background:var(--bg); color:var(--ink);
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: "Supertext 03", sans-serif;
   line-height:1.6;
 }
 img{max-width:100%; display:block}
 
 /* Typography */
-.mono{font-family:"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
-.eyebrow{letter-spacing:.12em;text-transform:uppercase;color:#d6d7d5;font-size:.9rem}
+.mono{font-family:"SF Mono", monospace; font-size: .9rem; line-height: 0;}
+.mono-bold{font-family:"SF Mono", monospace; font-size: .9rem; font-weight:700;}
+.eyebrow{letter-spacing:.12em;text-transform:uppercase;color:#d6d7d5;font-size:.9rem; margin: 2; /* Remove default paragraph margins */}
 .micro{font-size:.85rem;color:#d0d1cf}
 .section{max-width:var(--max); margin:0 auto; padding:64px 18px}
 .section-title{
@@ -74,12 +75,14 @@ img{max-width:100%; display:block}
   height: 52px; /* Final size increase */
   width: auto;
 }
-.brand-lines strong{font-size:.9rem; letter-spacing:.08em}
-.brand-lines small{display:block; font-size:.7rem; color:#bfc0bd}
+.brand-lines strong{font-family: "SF Mono", monospace; font-size:.9rem; letter-spacing:.08em}
+.brand-lines small{font-family: "SF Mono", monospace; display:block; font-size:.7rem; color:#bfc0bd}
 
 .pill{
   display:inline-block; padding:8px 14px; border-radius:999px;
-  border:1px solid rgba(215,255,69,.45); color:#e7e8e6; text-decoration:none; font-size:.9rem;
+  border:1px solid rgba(215,255,69,.45); color:#e7e8e6; text-decoration:none; 
+  font-family: "SF Mono", monospace;
+  font-size:.7rem;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
 }
 .pill:hover{background:var(--lime); color:#0e120e; border-color:transparent}
@@ -107,48 +110,103 @@ img{max-width:100%; display:block}
 /* =========================
    HERO
 ========================= */
-.hero{position:relative; max-width:var(--max); margin:0 auto; padding:86px 18px 90px; isolation: isolate; /* Create a new stacking context */}
-.headline{
-  font-family: "Bicubik", Orbitron, system-ui, sans-serif;
-  font-size: clamp(46px, 8.6vw, 144px);
-  line-height: 1.12;         /* a bit tighter like the mock */
-  letter-spacing: 0;          /* Figma: 0% */
-  text-transform: uppercase;
-}
-.headline .line{display:block}
-.eyebrow, .headline {
+.hero{
   position: relative;
-  z-index: 2; /* Lift text above background logos */
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 70px 18px 90px;
+  min-height: 90vh; /* Make hero fill the viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  isolation: isolate;           /* new stacking context so z-index is clean */
 }
-.headline .accent{color:var(--lime)}
-.round-cta{
-  position:absolute; left:50%; bottom:18px; transform:translateX(-50%);
-  display:inline-grid; place-items:center; width:48px; height:48px; border-radius:50%;
-  background:var(--lime); color:#0f130f; text-decoration:none; font-weight:800;
-  box-shadow:0 0 0 0 rgba(215,255,69,.35); transition:box-shadow .2s ease, transform .12s ease;
-}
-.round-cta:hover{transform:translateX(-50%) translateY(-1px); box-shadow:0 0 0 10px rgba(215,255,69,.25)}
 
+/* headline + eyebrow on top of the logos */
+.eyebrow, .headline, .micro, .round-cta{
+  font-family: "Bicubik", system-ui, sans-serif; 
+  position: relative; 
+  z-index: 2; 
+  line-height: 1;
+}
+
+.headline{
+  font-family: "Bicubik", system-ui, sans-serif;
+  font-size: clamp(46px, 7.7vw, 144px);
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin: 35px 0; /* Add small top/bottom margin to control spacing */
+}
+.headline .line{ display:block; }
+.headline .accent{ color: var(--lime); }
+
+/* center bottom CTA */
+.round-cta{
+  position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%);
+  display: inline-grid; place-items: center;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--lime); color: #0f130f; font-weight: 800; text-decoration: none;
+  box-shadow: 0 0 0 0 rgba(215,255,69,.35);
+  transition: box-shadow .2s ease, transform .12s ease;
+}
+.round-cta:hover{ transform: translateX(-50%) translateY(-1px); box-shadow: 0 0 0 10px rgba(215,255,69,.25); }
+
+/* ---------- Background logos (match Figma placement) ---------- */
+/* tweak these two variables to ‘nudge’ sizes if needed */
+:root{
+  --dg-right-size: min(60vw, 820px);
+  --dg-left-size:  min(58vw, 760px);
+}
+
+/* big right logo */
 .big-dg{
-  position:absolute; right:-14vw; bottom:-10vw; width:min(66vw, 860px);
-  pointer-events:none; user-select:none;
+  position: absolute;
+  z-index: -1;                   /* behind text but inside hero */
+  pointer-events: none; user-select: none;
+  width: var(--dg-right-size);
+  right: -20vw;                 /* push slightly off canvas */
+  bottom: -3vw;
+  rotate: 17deg;
 }
-.big-dg img{
-  width:100%; height:auto; opacity: 0.16; rotate: 16deg; /* Apply opacity directly to the image */
+.big-dg img{ display:block; width:100%; height:auto; opacity: 0.18; } /* Added opacity and missing brace */
+.big-dg--left{
+  width: var(--dg-left-size);
+  left: -25vw;                  /* more off canvas on the left */
+  bottom: -35vw;
+  right: auto;
+  rotate: -117deg;
 }
-.big-dg--left{ left:-20vw; bottom:-12vw; right:auto; transform:rotate(16deg) }
+
+/* ---------- Responsive nudges ---------- */
+@media (max-width: 1000px){
+  :root{
+    --dg-right-size: min(70vw, 760px);
+    --dg-left-size:  min(66vw, 680px);
+  }
+  .big-dg{ right: -12vw; bottom: -10vw; }
+  .big-dg--left{ left: -26vw; bottom: -18vw; }
+}
+@media (max-width: 640px){
+  :root{
+    --dg-right-size: 95vw;
+    --dg-left-size:  90vw;
+  }
+  .big-dg{ right: -28vw; bottom: -22vw; opacity: .14; }
+  .big-dg--left{ left: -40vw; bottom: -30vw; opacity: .14; }
+}
 
 /* =========================
    ABOUT
 ========================= */
-.about{background:var(--panel-2)}
+.about{background:var(--panel-2); position:relative; z-index: 2; /* Ensure this section sits above the hero's background logos */}
 .about__grid{display:grid; grid-template-columns:1.15fr .85fr; gap:22px; align-items:start}
 @media (max-width:900px){ .about__grid{grid-template-columns:1fr; } }
 .card{
   background:#2b2e33; border:1px solid #3a3d42; border-radius:20px; padding:18px;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
 }
-.frame{border-radius:20px; overflow:hidden; border:1px solid #3a3d42; background:#222}
+.frame{border-radius:20px; overflow:hidden; border:0px solid #3a3d42; background:#222}
 .about__photo.frame { aspect-ratio: 1 / 1; } /* Make container square */
 .about__photo img{width:100%; height:100%; display:block; object-fit:cover; /* Fill container, crop if needed */} 
 
@@ -170,9 +228,9 @@ img{max-width:100%; display:block}
 
 .tile{
   display:block; background:#222; border:1px solid #333; border-radius:22px; overflow:hidden;
-  transition:transform .15s ease, border-color .2s ease, box-shadow .2s ease;
+  transition:border-color .2s ease, box-shadow .2s ease;
 }
-.tile:hover{ transform:translateY(-2px); border-color:#454; box-shadow:0 10px 30px rgba(0,0,0,.3) }
+.tile:hover{ border-color:#454; box-shadow:0 10px 30px rgba(0,0,0,.3) }
 .tile__label{display:flex; justify-content:space-between; align-items:center; padding:10px 14px}
 .tile__label h3{margin:0; font-size:1.05rem}
 .chip{font-size:.75rem; padding:4px 8px; border:1px solid #3a3b3a; border-radius:999px; color:#d6d7d6}
