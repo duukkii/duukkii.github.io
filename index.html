@@ -61,21 +61,50 @@
             <h4 class="mono-bold">Duana’s Design Toolkit</h4>
             <div class="toolkit-icons">
               <figure>
-                <img src="assets/ps-icon.png" alt="Photoshop icon" />
+                <img src="assets/psd.png" alt="Photoshop icon" />
                 <figcaption class="micro">Adobe Photoshop</figcaption>
               </figure>
               <figure>
-                <img src="assets/ai-icon.png" alt="Illustrator icon" />
+                <img src="assets/ai.png" alt="Illustrator icon" />
                 <figcaption class="micro">Adobe Illustrator</figcaption>
               </figure>
               <figure>
-                <img src="assets/ae-icon.png" alt="After Effects icon" />
+                <img src="assets/ae.png" alt="After Effects icon" />
                 <figcaption class="micro">Adobe After Effects</figcaption>
               </figure>
               <figure>
-                <img src="assets/id-icon.png" alt="InDesign icon" />
+                <img src="assets/id.png" alt="InDesign icon" />
                 <figcaption class="micro">Adobe InDesign</figcaption>
               </figure>
+              <figure>
+                <img src="assets/figma.png" alt="Figma icon" />
+                <figcaption class="micro">Figma</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/procreate.png" alt="Procreate icon" />
+                <figcaption class="micro">Procreate</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/premierepro.png" alt="Premiere Pro icon" />
+                <figcaption class="micro">Adobe Premiere Pro</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/fusion360.png" alt="Fusion 360 icon" />
+                <figcaption class="micro">Fusion 360</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/keyshot.png" alt="KeyShot icon" />
+                <figcaption class="micro">KeyShot</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/rhino3d.png" alt="Rhino 3D icon" />
+                <figcaption class="micro">Rhino 3D</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/blender.png" alt="Blender icon" />
+                <figcaption class="micro">Blender</figcaption>
+              </figure>
+            </figure>
             </div>
           </div>
           <p>
@@ -94,21 +123,18 @@
     <h2 class="section-title">PROJECTS</h2>
 
     <!-- FILTERS -->
+    <!-- radios control category via CSS -->
+    <input type="radio" name="cat" id="show-all" checked>
+    <input type="radio" name="cat" id="show-uiux">
+    <input type="radio" name="cat" id="show-graphic">
+    <input type="radio" name="cat" id="show-product">
+    <input type="radio" name="cat" id="show-illustration">
+
     <div class="filters">
-      <!-- radios control category via CSS -->
-      <input type="radio" name="cat" id="show-all" checked>
       <label class="pill pill--big" for="show-all">all</label>
-
-      <input type="radio" name="cat" id="show-uiux">
       <label class="pill pill--big" for="show-uiux">ui/ux</label>
-
-      <input type="radio" name="cat" id="show-graphic">
       <label class="pill pill--big" for="show-graphic">graphic</label>
-
-      <input type="radio" name="cat" id="show-product">
       <label class="pill pill--big" for="show-product">product</label>
-
-      <input type="radio" name="cat" id="show-illustration">
       <label class="pill pill--big" for="show-illustration">illustration</label>
     </div>
 
@@ -116,32 +142,104 @@
     <div class="grid">
       <!-- item -->
       <a class="tile cat-product" href="project-raia.html">
-        <img src="assets/raia.jpg" alt="Project RAIA black vehicle render" />
+        <img src="assets/raia.png" alt="Project RAIA black vehicle render" />
         <div class="tile__label">
           <h3>Project RAIA</h3><span class="chip">product</span>
         </div>
       </a>
 
       <a class="tile cat-uiux" href="#">
-        <img src="assets/studywise-thumb.jpg" alt="StudyWise app preview" />
+        <img src="assets/apex cares.png" alt="ApexCares" />
         <div class="tile__label">
-          <h3>StudyWise</h3><span class="chip">ui/ux</span>
+          <h3>ApexCares</h3><span class="chip">ui/ux</span>
         </div>
       </a>
 
-      <a class="tile cat-graphic" href="#">
-        <img src="assets/poster-thumb.jpg" alt="Poster design preview" />
+      <a class="tile cat-graphic tile cat-illustration" href="#">
+        <img src="assets/ddz.png" alt="Dance Derivativez" />
         <div class="tile__label">
-          <h3>Golden Memories</h3><span class="chip">graphic</span>
+          <h3>SUTD's Dance Derivativez</h3><span class="chip">graphic</span>
+        </div>
+      </a>
+
+      <a class="tile cat-uiux" href="#">
+        <img src="assets/campus cupids.png" alt="Campus Cupids" />
+        <div class="tile__label">
+          <h3>Campus Cupids</h3><span class="chip">ui/ux</span>
+        </div>
+      </a>
+
+      <a class="tile cat-product tile cat-graphic" href="#">
+        <img src="assets/neokanken.png" alt="Neokanken" />
+        <div class="tile__label">
+          <h3>NeoKånken</h3><span class="chip">product</span>
+        </div>
+      </a>
+
+      <a class="tile cat-product tile cat-graphic" href="#">
+        <img src="assets/agriwave.png" alt="Agriwave" />
+        <div class="tile__label">
+          <h3>Agriwave</h3><span class="chip">product</span>
+        </div>
+      </a>
+
+      <a class="tile cat-uiux tile cat-product" href="#">
+        <img src="assets/7.png" alt="Pixel Paths" />
+        <div class="tile__label">
+          <h3>Pixel Paths</h3><span class="chip">ui/ux</span>
+        </div>
+      </a>
+
+      <a class="tile cat-uiux" href="#">
+        <img src="assets/golden memories.png" alt="Golden Memories" />
+        <div class="tile__label">
+          <h3>Golden Memories</h3><span class="chip">ui/ux</span>
+        </div>
+      </a>
+
+      <a class="tile cat-illustration tile cat-graphic" href="#">
+        <img src="assets/gapyearsg.png" alt="Gap Year Singapore" />
+        <div class="tile__label">
+          <h3>Gap Year Singapore</h3><span class="chip">illustration</span>
+        </div>
+      </a>
+
+      <a class="tile cat-graphic tile cat-illustration tile cat-uiux" href="#">
+        <img src="assets/maranatha.png" alt="Maranatha" />
+        <div class="tile__label">
+          <h3>Maranatha</h3><span class="chip">graphic</span>
+        </div>
+      </a>
+
+      <a class="tile cat-graphic tile cat-illustration" href="#">
+        <img src="assets/shinewithtbz.png" alt="Shine With TBZ" />
+        <div class="tile__label">
+          <h3>Shine With TBZ</h3><span class="chip">graphic</span>
         </div>
       </a>
 
       <a class="tile cat-illustration" href="#">
-        <img src="assets/illustration-thumb.jpg" alt="Illustration preview" />
+        <img src="assets/stickers.png" alt="Stickers" />
         <div class="tile__label">
-          <h3>NeoKånken</h3><span class="chip">illustration</span>
+          <h3>Stickers</h3><span class="chip">illustration</span>
         </div>
       </a>
+      
+      <a class="tile cat-product" href="#">
+        <img src="assets/sdw.png" alt="SDW" />
+        <div class="tile__label">
+          <h3>Spatial Design World</h3><span class="chip">product</span>
+        </div>
+      </a>
+
+      <a class="tile cat-graphic tile cat-illustration" href="#">
+        <img src="assets/agora.png" alt="Agora" />
+        <div class="tile__label">
+          <h3>Agora</h3><span class="chip">graphic</span>
+        </div>
+      </a>
+
+
       <!-- add more tiles and category classes as needed -->
     </div>
   </section>
