@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NeoKånken - duana goh</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=IBM+Plex+Mono:wght@300;400;600&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta name="description" content="NeoKånken details." />
+</head>
+<body class="detail-page">
+
+  <!-- Sticky header -->
+  <header class="hdr">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.svg" alt="dg logo" class="mark" />
+      <div class="brand-lines">
+        <strong>FROM CONCEPT TO CANVAS</strong>
+        <small>a duana goh design</small>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="index.html#home" class="pill">home</a>
+      <a href="index.html#about" class="pill">about me</a>
+      <a href="index.html#projects" class="pill active">projects</a>
+      <a href="index.html#experience" class="pill">experience</a>
+    </nav>
+  </header>
+
+  <section class="section">
+    <header class="project__head">
+      <h1 class="project__title">NeoKånken</h1>
+      <div class="project__sub-header">
+        <p class="eyebrow">Carry Tomorrow, Today.</p>
+        <div class="ribbon mono">10.024 Spatial Design World</div>
+      </div>
+    </header>
+
+    <div class="project__meta">
+      <div class="pill-box">
+        <h3 class="mono-bold">CATEGORY</h3>
+        <ul class="bullets">
+          <li class="mono">Product Design</li>
+          <li class="mono">Generative Design</li>
+          <li class="mono">Material Design</li>
+          <li class="mono">User-centered Design</li>
+          <li class="mono">Graphic Design</li>
+          <li class="mono">Artificial Intelligence</li>
+        </ul>
+      </div>
+      <div class="pill-box pill-box--highlight">
+        <h3 class="mono-bold">SUMMARY</h3>
+        <p class="mono">In the near future, cities are expected to become increasingly walkable as individuals and governments grow more conscious of the need to address pollution from transportation. The necessity for adaptable and durable backpacks is thus increasing rapidly.</p>
+        <p class="mono">NEOKånken uses a lightweight exoskeleton frame to keep its shape and distribute weight comfortably over long wear. A snap-on system adds or swaps straps, padding, pockets, and accessories, while durable, weather-resistant materials keep weight down—creating one customizable, organized carry for any day.</p>
+      </div>
+      <div class="pill-box">
+        <h3 class="mono-bold">SOFTWARE</h3>
+        <ul class="bullets">
+          <li class="mono">Rhino 3D</li>
+          <li class="mono">Canva</li>
+          <li class="mono">Adobe Illustrator</li>
+          <li class="mono">Adobe Photoshop</li>
+          <li class="mono">Stable Diffusion</li>
+          <li class="mono">Procreate</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <h3 class="eyebrow" style="color: var(--panel); text-align: center; font-weight: bold; font-size: 1.2rem;">PROJECT GALLERY</h3>
+      <p class="mono" style="color: var(--panel);">The NeoKånken was designed based off Fjällräven's iconic Kånken backpack, but innovatively adapted to create a customisable and durable backpack for students and workers in the near future. Together with my team, we were able to design an innovative and efficacious solution. The gallery below showcases our solution and details of our creative process.</p>
+      <div class="image-container">
+        <figure>
+          <img src="assets/neo1.png" alt="SDS Team 8: Final Project Showcase">
+          <figcaption class="mono" style="color: var(--panel); font-style: italic;">NeoKånken Poster</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/neo2.png" alt="SDS Team 8: Final Project Showcase at Google Office">
+          <figcaption class="mono" style="color: var(--panel); font-style: italic;">NeoKånken Final Project Showcase</figcaption>
+        </figure>
+      </div>
+
+      <div style="max-width: 80%; margin: 3rem auto 0; align-items: center;">
+        <video class="frame" style="width: 100%;" autoplay loop muted playsinline poster="assets/placeholder.png">
+          <source src="assets/SDW NEOKånken Slides.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <section class="project__section">
+        <h3 class="mono-bold" style="color: var(--panel);">View the presentation slides here:</h3>
+        <iframe class="pdf-embed" src="https://drive.google.com/file/d/1Esjh4q7uiuTKLR5L7mMCNovN0AkZSyso/preview" title="NeoKånken Presentation Slides"></iframe>
+      </section>
+      <section class="project__section">
+        <h3 class="mono-bold" style="color: var(--panel);">View the report here:</h3>
+        <iframe class="pdf-embed" src="https://drive.google.com/file/d/13XmD46Sfizu2pp2XY5EPfj9xRbp9GCio/preview" title="NeoKånken Report"></iframe>
+      </section>
+    </div>
+        
+    <footer class="project__section">
+      <a href="index.html#projects" class="back pill">← Back to Projects</a>
+    </footer>
+  </section>
+
+  <footer class="ftr">
+    © <span id="y"></span> duana goh — from concept to canvas
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
