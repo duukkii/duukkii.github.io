@@ -170,7 +170,7 @@ img{max-width:100%; display:block}
   bottom: -3vw;
   transform: rotate(17deg);
 }
-.big-dg img{ display:block; width:100%; height:auto; opacity: 0.18; } /* Added opacity and missing brace */
+.big-dg img{ display:block; width:100%; height:auto; opacity: 0.18; }
 .big-dg--left{
   width: var(--dg-left-size);
   left: -25vw;                  /* more off canvas on the left */
@@ -637,4 +637,118 @@ img{max-width:100%; display:block}
 .cta-link:hover {
   background: var(--lime);
   color: #101410;
+}
+
+/* =========================
+   GAPYEARSG PAGE
+========================= */
+.project__section {
+  margin-bottom: 3rem;
+}
+
+.ig-grid {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.ig-post {
+  display: block;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--stroke);
+}
+
+.ig-post img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform .3s ease;
+}
+
+.ig-post:hover img {
+  transform: scale(1.05);
+}
+
+.comic-strip-gallery a {
+  flex: 0 0 24%;
+  min-width: 220px;
+}
+
+.comic-strip-gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.gallery-wrapper {
+  position: relative;
+}
+
+.scroll-arrow {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  animation: pulse-right 1.5s infinite;
+  z-index: 10;
+}
+
+@keyframes pulse-right {
+  0% { transform: translateY(-50%) translateX(0); }
+  50% { transform: translateY(-50%) translateX(5px); }
+  100% { transform: translateY(-50%) translateX(0); }
+}
+
+.webinar-item img {
+  border-radius: 12px;
+  border: 0px solid var(--stroke);
+}
+
+.webinar-slides-gallery a {
+  flex: 0 0 40%; /* Show ~2.5 items */
+  min-width: 320px;
+}
+
+.webinar-slides-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.podcast-grid .podcast-asset {
+  background: var(--panel);
+  border: 0px solid var(--stroke);
+  border-radius: 16px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.podcast-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photocard-strip-gallery a {
+  flex: 0 0 auto; /* Let the width be determined by the image content */
+}
+
+/* Override the default height for the photocard strip */
+.photocard-strip-gallery img {
+  height: 150px; /* Set a smaller, fixed height for photocards */
+  width: auto;
 }
