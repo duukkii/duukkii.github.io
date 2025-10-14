@@ -143,100 +143,58 @@
       <!-- item -->
       <a class="tile cat-product" href="project-raia.html">
         <img src="assets/raia.png" alt="Project RAIA black vehicle render" />
-        <div class="tile__label">
-          <h3>Project RAIA</h3><span class="chip">product</span>
-        </div>
       </a>
 
       <a class="tile cat-uiux" href="apex-cares.html">
         <img src="assets/apex cares.png" alt="ApexCares" />
-        <div class="tile__label">
-          <h3>ApexCares</h3><span class="chip">ui/ux</span>
-        </div>
       </a>
 
       <a class="tile cat-graphic tile cat-illustration" href="ddz.html">
         <img src="assets/ddz.png" alt="Dance Derivativez" />
-        <div class="tile__label">
-          <h3>SUTD's Dance Derivativez</h3><span class="chip">graphic</span>
-        </div>
       </a>
 
       <a class="tile cat-uiux" href="campus-cupids.html">
         <img src="assets/campus cupids.png" alt="Campus Cupids" />
-        <div class="tile__label">
-          <h3>Campus Cupids</h3><span class="chip">ui/ux</span>
-        </div>
       </a>
 
       <a class="tile cat-product tile cat-graphic" href="neokanken.html">
         <img src="assets/neokanken.png" alt="Neokanken" />
-        <div class="tile__label">
-          <h3>NeoKånken</h3><span class="chip">product</span>
-        </div>
       </a>
 
       <a class="tile cat-product tile cat-graphic" href="agriwave.html">
         <img src="assets/agriwave.png" alt="Agriwave" />
-        <div class="tile__label">
-          <h3>Agriwave</h3><span class="chip">product</span>
-        </div>
       </a>
 
       <a class="tile cat-uiux tile cat-product" href="pixel-paths.html">
         <img src="assets/7.png" alt="Pixel Paths" />
-        <div class="tile__label">
-          <h3>Pixel Paths</h3><span class="chip">ui/ux</span><span class="chip">product</span>
-        </div>
       </a>
 
       <a class="tile cat-uiux" href="golden-memories.html">
         <img src="assets/golden memories.png" alt="Golden Memories" />
-        <div class="tile__label">
-          <h3>Golden Memories</h3><span class="chip">ui/ux</span>
-        </div>
       </a>
 
       <a class="tile cat-illustration tile cat-graphic" href="gapyearsg.html">
         <img src="assets/gapyearsg.png" alt="Gap Year Singapore" />
-        <div class="tile__label">
-          <h3>Gap Year Singapore</h3><span class="chip">illustration</span>
-        </div>
       </a>
 
       <a class="tile cat-graphic tile cat-illustration tile cat-uiux" href="maranatha.html">
         <img src="assets/maranatha.png" alt="Maranatha" />
-        <div class="tile__label">
-          <h3>Maranatha</h3><span class="chip">graphic</span>
-        </div>
       </a>
 
       <a class="tile cat-graphic tile cat-illustration" href="shinewithtbz.html">
         <img src="assets/shinewithtbz.png" alt="Shine With TBZ" />
-        <div class="tile__label">
-          <h3>Shine With TBZ</h3><span class="chip">graphic</span>
-        </div>
       </a>
 
       <a class="tile cat-illustration" href="sticker.html">
         <img src="assets/stickers.png" alt="Stickers" />
-        <div class="tile__label">
-          <h3>Stickers</h3><span class="chip">illustration</span>
-        </div>
       </a>
       
       <a class="tile cat-product" href="sdw.html">
         <img src="assets/sdw.png" alt="SDW" />
-        <div class="tile__label">
-          <h3>Spatial Design World</h3><span class="chip">product</span>
-        </div>
       </a>
 
       <a class="tile cat-graphic tile cat-illustration" href="mnm.html">
         <img src="assets/agora.png" alt="Agora" />
-        <div class="tile__label">
-          <h3>Agora</h3><span class="chip">graphic</span>
-        </div>
       </a>
 
 
@@ -245,32 +203,96 @@
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience" class="experience section">
-    <h2 class="section-title">EXPERIENCE</h2>
+  <section id="experience" class="experience">
+    <div class="section">
+      <h2 class="section-title">EXPERIENCE</h2>
 
-    <article class="xp card card--row">
-      <div class="xp__text">
-        <h3 class="xp__role">STEAMUNITY MENTOR <span class="org">SUTD STEAMUNITY</span></h3>
-        <ul class="bullets">
-          <li>Mentored students to maximize storage utility for a mobility device (with NKF).</li>
-          <li>Taught design thinking skills for pre-university students (15–19).</li>
-        </ul>
+      <!-- FILTERS -->
+      <input type="radio" name="xp-cat" id="show-xp-all" checked>
+      <input type="radio" name="xp-cat" id="show-work">
+      <input type="radio" name="xp-cat" id="show-leadership">
+
+      <div class="filters">
+        <label class="pill pill--big" for="show-xp-all">all</label>
+        <label class="pill pill--big" for="show-work">work</label>
+        <label class="pill pill--big" for="show-leadership">leadership</label>
       </div>
-      <figure class="xp__photo frame"><img src="assets/xp-steam.jpg" alt="STEAMUNITY group photo"></figure>
-    </article>
 
-    <article class="xp card card--row">
-      <div class="xp__text">
-        <h3 class="xp__role">ESSAY MARKER <span class="org">WRITERS GUILD</span></h3>
-        <ul class="bullets">
-          <li>Graded essays and gave detailed feedback on content, structure, grammar.</li>
-          <li>Applied standardized criteria to ensure fairness and improvement.</li>
-        </ul>
-      </div>
-      <figure class="xp__photo frame"><img src="assets/xp-writers.jpg" alt="Writers Guild logo"></figure>
-    </article>
+    <article class="xp card card--row cat-work cat-leadership x-pill-box">
+        <div class="xp__text" style="padding: 20px;">
+          <h3 class="xp__role">STEAMUNITY MENTOR <span class="org">SUTD STEAMUNITY</span></h3>
+          <ul class="bullets mono">
+            <li>Mentored students in applying STEM and project management principles to maximise utility of a mobility device storage space in partnership with National Kidney Foundation (NKF).</li>
+            <li>Facilitated design innovation thinking skills for pre-university students ranging from ages 15 to 19.</li>
+          </ul>
+        </div>
+        <figure class="xp__photo frame"><img src="assets/steamunity.jpeg" alt="STEAMUNITY group photo"></figure>
+      </article>
 
-    <!-- add more as needed -->
+      <article class="xp card card--row cat-work x-pill-box">
+        <div class="xp__text" style="padding: 20px;">
+          <h3 class="xp__role">ESSAY MARKER <span class="org">WRITERS GUILD</span></h3>
+          <ul class="bullets mono">
+            <li>Assessed and graded academic essays across various topics, providing detailed feedback on content, structure and grammar.</li>
+            <li>Applied standardised grading criteria to ensure fairness and consistency, while offering constructive comments to guide student improvement.</li>
+          </ul>
+        </div>
+        <figure class="xp__photo frame"><img src="assets/wg.png" alt="Writers Guild logo"></figure>
+      </article>
+
+      <article class="xp card card--row cat-work x-pill-box">
+        <div class="xp__text" style="padding: 20px;">
+          <h3 class="xp__role">MEDIA EXECUTIVE <span class="org">MINISTRY OF EDUCATION (MOE)</span></h3>
+          <ul class="bullets mono">
+            <li>Designed Infographics, Course Booklets and other related material for the Professional Development Unit.</li>
+            <li>Assisted in running and troubleshooting software for webinars.</li>
+            <li>Assisted superiors with various admin and ad-hoc duties.</li>
+          </ul>
+        </div>
+        <figure class="xp__photo frame"><img src="assets/moecceb.jpg" alt="MOE CCEB"></figure>
+      </article>
+
+      <article class="xp card card--row cat-work x-pill-box">
+        <div class="xp__text" style="padding: 20px;">
+          <h3 class="xp__role">ADMINISTRATIVE ASSISTANT <span class="org">MANULIFE PTE. LTD.</span></h3>
+          <ul class="bullets mono">
+            <li>Assisted superiors with various admin and ad-hoc duties.</li>
+            <li>Ensured to keep work information confidential due to the highly classified nature of the company.</li>
+            <li>Demonstrated strong communication, organization, and multitasking skills while efficiently managing daily office tasks and supporting team members.</li>
+          </ul>
+        </div>
+        <figure class="xp__photo frame"><img src="assets/manulife.png" alt="Manulife"></figure>
+      </article>
+
+      <article class="xp card card--row cat-leadership x-pill-box">
+        <div class="xp__text" style="padding: 20px;">
+          <h3 class="xp__role">SECRETARY OF MEDIA AND MARKETING <span class="org">
+            <br>SUTD ROOT (STUDENT GOVERNMENT)</span></h3>
+          <ul class="bullets mono">
+            <li>Assisted superiors with various admin and ad-hoc duties.</li>
+            <li>Ensured to keep work information confidential due to the highly classified nature of the company.</li>
+            <li>Demonstrated strong communication, organization, and multitasking skills while efficiently managing daily office tasks and supporting team members.</li>
+          </ul>
+        </div>
+        <figure class="xp__photo frame"><img src="assets/mnm.JPG" alt="MNM"></figure>
+      </article>
+
+      <article class="xp card card--row cat-leadership x-pill-box">
+        <div class="xp__text" style="padding: 20px;">
+          <h3 class="xp__role">HEAD OF EXTERNAL PUBLICITY <span class="org">SUTD DANCE DERIVATIVEZ</span></h3>
+          <ul class="bullets mono">
+            <li>Assisted superiors with various admin and ad-hoc duties.</li>
+            <li>Ensured to keep work information confidential due to the highly classified nature of the company.</li>
+            <li>Demonstrated strong communication, organization, and multitasking skills while efficiently managing daily office tasks and supporting team members.</li>
+          </ul>
+        </div>
+        <figure class="xp__photo frame"><img src="assets/exco.jpeg" alt="EXCO"></figure>
+      </article>
+
+      
+
+      <!-- add more as needed -->
+    </div>
   </section>
 
     <!-- Re-trigger deployment -->
