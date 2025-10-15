@@ -48,7 +48,7 @@ img{max-width:100%; display:block}
 /* Typography */
 .mono{font-family:"SF Mono", monospace; font-size: .9rem; font-weight:400;}
 .mono-bold{font-family:"SF Mono", monospace; font-size: .9rem; font-weight:700;}
-.eyebrow{letter-spacing:.12em;text-transform:uppercase;color:#d6d7d5;font-size:.9rem; margin: 2; /* Remove default paragraph margins */}
+.eyebrow{font-family:"Orbitron", sans-serif; letter-spacing:.12em;text-transform:uppercase;color:#d6d7d5;font-size:.9rem; margin: 2; /* Remove default paragraph margins */}
 .micro{font-size:.85rem;color:#d0d1cf}
 .section{max-width:var(--max); margin:0 auto; padding:64px 18px}
 .section-title{
@@ -149,14 +149,14 @@ img{max-width:100%; display:block}
 
 /* headline + eyebrow on top of the logos */
 .eyebrow, .headline, .micro, .round-cta{
-  font-family: "Bicubik", system-ui, sans-serif; 
+  font-family: "Orbitron", system-ui, sans-serif; 
   position: relative; 
   z-index: 2; 
   line-height: 1;
 }
 
 .headline{
-  font-family: "Bicubik", system-ui, sans-serif;
+  font-family: "Orbitron", system-ui, sans-serif;
   font-size: clamp(46px, 7.7vw, 144px);
   line-height: 1;
   letter-spacing: 0;
