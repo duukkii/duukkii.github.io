@@ -900,6 +900,12 @@ img{max-width:100%; display:block}
   to { transform: rotate(360deg); }
 }
 
+.desktop-notice {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: -10px; /* Pull it closer to the main message */
+}
+
 /* Media Query for mobile portrait mode */
 @media only screen and (max-width: 768px) and (orientation: portrait) {
   #main-content {
