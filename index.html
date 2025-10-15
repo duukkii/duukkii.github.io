@@ -25,7 +25,7 @@
     <label for="menu" class="hamburger" aria-hidden="true"><span></span></label>
 
     <nav class="nav">
-      <a href="#home" class="pill active">home</a>
+      <a href="#home" class="pill">home</a>
       <a href="#about" class="pill">about me</a>
       <a href="#projects" class="pill">projects</a>
       <a href="#experience" class="pill">experience</a>
@@ -194,7 +194,7 @@
       </a>
 
       <a class="tile cat-graphic tile cat-illustration" href="mnm.html">
-        <img src="assets/agora.png" alt="Agora" />
+        <img src="assets/mnm.png" alt="M&M" />
       </a>
 
 
@@ -206,6 +206,12 @@
   <section id="experience" class="experience">
     <div class="section">
       <h2 class="section-title">EXPERIENCE</h2>
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <a href="assets/Duana goh.pdf" target="_blank" class="pill pill--resume" rel="noopener noreferrer">
+          <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20M11,19H13V16H15V14H13V11H11V14H9V16H11V19Z" /></svg>
+          <span>View My Resume</span>
+        </a>
+      </div>
 
       <!-- FILTERS -->
       <input type="radio" name="xp-cat" id="show-xp-all" checked>
@@ -269,9 +275,9 @@
           <h3 class="xp__role">SECRETARY OF MEDIA AND MARKETING <span class="org">
             <br>SUTD ROOT (STUDENT GOVERNMENT)</span></h3>
           <ul class="bullets mono">
-            <li>Assisted superiors with various admin and ad-hoc duties.</li>
-            <li>Ensured to keep work information confidential due to the highly classified nature of the company.</li>
-            <li>Demonstrated strong communication, organization, and multitasking skills while efficiently managing daily office tasks and supporting team members.</li>
+            <li>Led my team of Media and Marketing Directors to handle publicity for SUTD's student life and events.</li>
+            <li>Organised and led department meetings to ensure smooth workflow and clear communication, maintaining the welfare of my team.</li>
+            <li>Managed Instagram and TikTok accounts @sutdlife to increase visibility of SUTD's student life and events.</li>
           </ul>
         </div>
         <figure class="xp__photo frame"><img src="assets/mnm.JPG" alt="MNM"></figure>
@@ -281,14 +287,25 @@
         <div class="xp__text" style="padding: 20px;">
           <h3 class="xp__role">HEAD OF EXTERNAL PUBLICITY <span class="org">SUTD DANCE DERIVATIVEZ</span></h3>
           <ul class="bullets mono">
-            <li>Assisted superiors with various admin and ad-hoc duties.</li>
-            <li>Ensured to keep work information confidential due to the highly classified nature of the company.</li>
-            <li>Demonstrated strong communication, organization, and multitasking skills while efficiently managing daily office tasks and supporting team members.</li>
+            <li>Led external publicity for SUTD Dance DerivativeZ—owned IG/TikTok, set brand voice, content cadence, and weekly Stories.</li>
+            <li>Designed campaign assets and show collateral for Ignition (2024) and Byte 4.0 (2025), ensuring cohesive visuals across channels.</li>
+            <li>Managed end-to-end production and on-day coverage, using KPIs/insights to grow reach and engagement.</li>
           </ul>
         </div>
         <figure class="xp__photo frame"><img src="assets/exco.jpeg" alt="EXCO"></figure>
       </article>
 
+      <article class="xp card card--row cat-leadership x-pill-box">
+        <div class="xp__text" style="padding: 20px;">
+          <h3 class="xp__role">HEAD OF PUBLICITY <span class="org">CAMP MARANATHA 2023</span></h3>
+          <ul class="bullets mono">
+            <li>Led my team in end-to-end publicity and visual identity for Camp Maranatha 2023 across web, social, on-site collateral, and merch.</li>
+            <li>Built and maintained the Wix site; produced the camp booklet, schedules/wayfinding, and cohesive event signage.</li>
+            <li>Designed participant keepsakes—sticker sheets, Crocs jibbitz, lanyard set, postcards, camp shirt—and delivered print-ready files.</li>
+          </ul>
+        </div>
+        <figure class="xp__photo frame"><img src="assets/yclogo.jpeg" alt="YC"></figure>
+      </article>
       
 
       <!-- add more as needed -->
@@ -303,6 +320,24 @@
   <script>
     // current year only
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // active nav on scroll
+    const navLinks = document.querySelectorAll('.nav a');
+    const sections = document.querySelectorAll('section[id]');
+
+    function changeNav() {
+      let index = sections.length;
+      while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
+      
+      navLinks.forEach((link) => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') == '#' + sections[index].id) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', changeNav);
   </script>
 </body>
 </html>

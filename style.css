@@ -88,6 +88,30 @@ img{max-width:100%; display:block}
 }
 .pill:hover{background:var(--lime); color:#0e120e; border-color:transparent}
 .pill.active{background:var(--lime); color:#0e120e; font-weight:700}
+
+.pill--resume {
+  background: var(--lime);
+  color: #101410;
+  border-color: transparent;
+  border-radius: 12px;
+  padding: 14px 22px; /* from .pill--big */
+  text-transform: uppercase; /* from .pill--big */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  transition: transform 0.2s ease-in-out;
+}
+
+.pill--resume:hover {
+  transform: scale(1.05);
+}
+
+.pill--resume .pdf-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor; /* Icon color will match text color */
+}
 .nav{display:flex; gap:10px}
 
 /* mobile menu */
