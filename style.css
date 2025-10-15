@@ -164,6 +164,10 @@ img{max-width:100%; display:block}
   margin: 35px 0; /* Add small top/bottom margin to control spacing */
 }
 .headline .line{ display:block; }
+
+@media (max-width: 640px) {
+  .headline .line { display: inline; }
+}
 .headline .accent{ color: var(--lime); }
 
 /* center bottom CTA */
@@ -859,3 +863,59 @@ img{max-width:100%; display:block}
 }
 .icon img{ display:block; width: 20px; height: 20px; }        /* for the Simple Icons <img> */
 .icon i{ font-size:22px; line-height:1; }  /* for Font Awesome */
+
+/* --- Rotate Device Overlay --- */
+#rotate-device-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg);
+  color: var(--ink);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+}
+
+.rotate-device-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.rotate-icon {
+  width: 60px;
+  height: 60px;
+  opacity: 0.5;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Media Query for mobile portrait mode */
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  #main-content {
+    display: none;
+  }
+  #rotate-device-overlay {
+    display: flex;
+  }
+}
+
+/* Media Query for mobile landscape mode (redundant but good practice) */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  #main-content {
+    display: block;
+  }
+  #rotate-device-overlay {
+    display: none;
+  }
+}
